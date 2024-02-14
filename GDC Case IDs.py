@@ -12,7 +12,7 @@ import os
 import requests
 import json
 
-csv_filepath = r'C:\Users\utska\OneDrive\Med School\Research\Genomics\RNA Seq'
+csv_filepath = r'C:\Users\ ... ' # Edit this and the filename as needed
 csv_filename = r'UUID List.csv'
 UUID_list = pd.read_csv(csv_filepath + chr(92) + csv_filename)
 Entity_ID_list = []
