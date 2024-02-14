@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
 # Key functions and imported libraries
 from docx import Document
 import pandas as pd
@@ -20,9 +26,17 @@ for i in range(len(UUID_list)):
     # Find the ENTITY_ID and append to the list
     Entity_ID_list.append(json_request[json_request.find('"submitter_id": "') + len('"submitter_id": "'):json_request.find('"\n')]) 
 
+
+# In[2]:
+
+
 # Display Entity_ID_list
 UUID_list['Entity_ID'] = Entity_ID_list
 UUID_list.tail(5)
 
+
+# In[3]:
+
 # Convert back to CSV
 UUID_list.to_csv(csv_filename, index=False)
+
